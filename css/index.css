@@ -1,0 +1,120 @@
+body{
+    /*background: #eee;*/
+}
+ul,ol{
+	list-style: none;
+}
+#header{
+	height: 100px;
+	position: relative;
+}
+#logo{
+	float: left;
+	height:100px;
+	width: 162px;
+}
+#logo img{
+	height:100%;
+}
+#header p{
+	position: absolute;
+	font-size: 20px;
+	color: #EE7621;
+	top: 60px;
+	left: 265px;
+}
+#welcome{
+	float: right;
+	width: 100px;
+	height: 100px;
+	position: relative;	
+}
+#welcome span{
+	float: left;
+	font-size: 15px;
+	margin-top: 60px;
+}
+#welcome span a{
+	color: #EE7621;
+}
+#regist{
+	margin-right: 10px;
+}
+#login{
+	margin-left: 10px;
+}
+#regist:hover, #login:hover{
+	/*color: red;*/
+	background: #e7e7e7;
+	cursor: pointer;
+}
+#nav{
+	margin-top: 20px;
+}
+.hide{
+	display: none;
+}
+#banner{
+	margin-top: 30px;
+}
+#banner .wrap{
+	position: relative;
+	width:1000px;
+	height: 500px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+#tab{
+	position: absolute;
+	right: 12px;
+	bottom: 2px;
+}
+#tab li{
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 40px;
+	background: #666;
+	color: white;
+	float: left;
+	margin-left: 6px;
+	cursor: pointer;
+	/*opacity: 0.5;*/
+}
+#tab .li-selected{
+background: orange;
+}
+#imgs img{
+	display: none;
+	width: 100%;
+	/*height: 100%;*/
+}
+#imgs .img-selected{
+	display: block;
+}
+#arrow{
+	position: absolute;
+	left: 12px;
+	bottom: 12px;
+}
+#arrow span{
+	display: block;
+	float: left;
+	width: 40px;
+	height: 40px;
+	background: #666;
+	color: white;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: center;
+	margin-left: 8px;
+	cursor: pointer;
+}
+#ahead:hover,#next:hover{
+	background: white;
+	color: black;
+}
+
+
