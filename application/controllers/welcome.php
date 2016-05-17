@@ -19,11 +19,29 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('index.php');
+		$username = $this->session->userdata('username');
+		$change = $this->session->userdata('change-ID');
+		$indent = $this->session->userdata('indent');
+		$display = $this->session->userdata('display');
+		$this->session->unset_userdata('username');//删session
+		$this->session->unset_userdata('change-ID');//删session
+		$this->session->unset_userdata('indent');//删session
+		$this->session->unset_userdata('display');//删session
+		// $data['username'] = $username;
+		$data = array(
+			'username'=>$username,
+			'change'=>$change,
+			'indent'=>$indent,
+			'display'=>$display
+			);
+		// echo $data ->$username;
+		// echo "<pre>";
+		// var_dump($data);
+		
+		// echo "</pre>";
+		$this->load->view('index.php', $data);
 	}
-	public function second(){
-		$this -> load->view('second.php');
-	}
+	
 }
 
 /* End of file welcome.php */

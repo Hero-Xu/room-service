@@ -15,9 +15,11 @@
         </div>
         <p >  让您做生活的主人！</p>
         <div id="welcome">
-        	<span id="regist"><a href="users/regist">注册</a></span>
-        	<span>||</span>
-        	<span id="login"><a href="users/login">登陆</a></span>
+        	<span style="color:#ee7621"><?php echo $username?></span>
+        	<span style="color:red"><?php echo $change?></span>
+        	<span id="regist" <?php echo $display?>><a href="users/regist">注册</a></span>
+        	<span <?php echo $display?>>||</span>
+        	<span id="login" <?php echo $display?>><a href="users/login">登陆</a></span>
         </div>
     </div>
 </div>
@@ -32,10 +34,33 @@
 			    <li><a href="##">美甲</a></li>
 			    <li><a href="##">关于我们</a></li>
 			    <li><a href="##">联系我们</a></li>
-
+				<li><a onsubmit="return false"><?php echo $indent?></a></li>
 			</ul>
 		</div>
     </div>
+</div>
+<div id="indent">
+	<ul>
+		<li>
+			<img src="images/logo.jpg" alt="">
+			<span></span>
+			<p>从事该行业两年，经验丰富，态度热情</p>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<img src="" alt="">
+			<span></span>
+			<p></p>
+		</li>
+	</ul>
+	<ul>
+		<li>
+			<img src="" alt="">
+			<span></span>
+			<p></p>
+		</li>
+	</ul>
 </div>
 <div id="banner">
 	<div class="container">

@@ -25,7 +25,7 @@ ul,ol{
 }
 #welcome{
 	float: right;
-	width: 100px;
+	width: 200px;
 	height: 100px;
 	position: relative;	
 }
@@ -33,9 +33,12 @@ ul,ol{
 	float: left;
 	font-size: 15px;
 	margin-top: 60px;
+	/*margin-left: 15px;*/
+
 }
 #welcome span a{
 	color: #EE7621;
+
 }
 #regist{
 	margin-right: 10px;
