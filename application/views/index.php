@@ -40,27 +40,63 @@
     </div>
 </div>
 <div id="indent">
-	<ul>
-		<li>
-			<img src="images/logo.jpg" alt="">
-			<span></span>
-			<p>从事该行业两年，经验丰富，态度热情</p>
-		</li>
-	</ul>
-	<ul>
-		<li>
-			<img src="" alt="">
-			<span></span>
-			<p></p>
-		</li>
-	</ul>
-	<ul>
-		<li>
-			<img src="" alt="">
-			<span></span>
-			<p></p>
-		</li>
-	</ul>
+	<div class="container">
+		<ul>
+			<li>
+				<img src="images/logo.jpg" alt="">
+				<span>wangxu</span>
+				<span>man</span>
+				<span>$20</span>
+				<p>从事该行业两年，经验丰富，态度热情</p>
+				<button>预定</button>
+			</li>
+			<li>
+				<img src="images/logo.jpg" alt="">
+				<span>wangxu</span>
+				<span>man</span>
+				<span>$20</span>
+				<p>从事该行业两年，经验丰富，态度热情</p>
+				<button>预定</button>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<img src="images/logo.jpg" alt="">
+				<span>wangxu</span>
+				<span>man</span>
+				<span>$20</span>
+				<p>从事该行业两年，经验丰富，态度热情</p>
+				<button>预定</button>
+			</li>
+			<li>
+				<img src="images/logo.jpg" alt="">
+				<span>wangxu</span>
+				<span>man</span>
+				<span>$20</span>
+				<p>从事该行业两年，经验丰富，态度热情</p>
+				<button>预定</button>
+			</li>
+		</ul>
+		<ul>
+			<li>
+				<img src="images/logo.jpg" alt="">
+				<span>wangxu</span>
+				<span>man</span>
+				<span>$20</span>
+				<p>从事该行业两年，经验丰富，态度热情</p>
+				<button>预定</button>
+			</li>
+			<li>
+				<img src="images/logo.jpg" alt="">
+				<span>wangxu</span>
+				<span>man</span>
+				<span>$20</span>
+				<p>从事该行业两年，经验丰富，态度热情</p>
+				<button>预定</button>
+			</li>
+		</ul>
+	</div>
+	
 </div>
 <div id="banner">
 	<div class="container">
@@ -89,7 +125,26 @@
 </div>
 <script src="js/jquery-1.11.3.js"></script>
 	<script>
+
 	   $(function(){
+
+	 //   	// 瀑布流开始
+	 //   	$.get('hair/get_hair', function(res){
+		// 	for(var i=0; i<res.length; i++){
+		// 		var hair = res[i];
+		// 		var html = '<li>'+ 
+		// 					   '<img src="" alt="">'+
+		// 					   '<span>'+ hair.hair_name +'</span>'+
+		// 					   '<p></p>'+
+		// 					   '<button></button>'+
+		// 				   '</li>';
+		// 		$('#indent').append(html);
+		// 	}
+		// }, 'json');
+		//瀑布流结束
+
+
+		//轮播图开始
 	   		var oContainer = $('#banner .wrap');
 		   	var aImg = $('#imgs img');
 		   	// alert(aImg);

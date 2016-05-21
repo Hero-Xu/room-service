@@ -12,7 +12,7 @@
 		<h2>注册</h2>
 	</div>
 	<div id="reg-log-wrap">
-		<form role="form" action="users/do_regist" method="post" onsubmit = "return false">
+		<form role="form" onsubmit = "return false">
 			<div class="form-group">
 			    <label for="exampleInputEmail1">姓名：</label>
 			    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="请输入您的姓名" name="name">

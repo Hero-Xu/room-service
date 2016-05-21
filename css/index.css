@@ -119,5 +119,15 @@ background: orange;
 	background: white;
 	color: black;
 }
-
+#indent{
+	margin-top: 30px;
+}
+#indent ul{
+	width: 33%;
+	padding: 10px;
+	float: left;
+}
+#indent ul img{
+	width: 300px;
+}
 
