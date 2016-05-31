@@ -124,10 +124,27 @@ background: orange;
 }
 #indent ul{
 	width: 33%;
-	padding: 10px;
+	padding: 20px;
 	float: left;
 }
 #indent ul img{
-	width: 300px;
+	width: 100%;
+}
+#indent ul li {
+	/*font-size: 20px;*/
+	margin-bottom: 30px;
+}
+#indent ul li .wrap-span{
+	text-align: center;
+	margin: 10px 0;
+}
+#indent ul li span{
+	/*float: left;*/
+	font-size: 15px;
+	color: #EE7621;
+	margin: 0px 5px;
+}
+#indent ul li button{
+	margin: ;
 }
 

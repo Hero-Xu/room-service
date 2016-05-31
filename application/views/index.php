@@ -27,11 +27,11 @@
 	<div class="container">
         <div class="navbar navbar-default" role="navigation">
 			<ul class="nav navbar-nav">
-			    <li class="active"><a href="##">网站首页</a></li>
-			    <li><a href="welcome/second">理发</a></li>
-			    <li><a href="##">家教</a></li>
-			    <li><a href="##">清洁</a></li>
-			    <li><a href="##">美甲</a></li>
+			    <li class="active"><a>网站首页</a></li>
+			    <li id="hair"><a>理发</a></li>
+			    <li id="teacher"><a>家教</a></li>
+			    <li id="clean"><a>清洁</a></li>
+			    <li id="hand"><a>美甲</a></li>
 			    <li><a href="##">关于我们</a></li>
 			    <li><a href="##">联系我们</a></li>
 				<li><a onsubmit="return false"><?php echo $indent?></a></li>
@@ -44,10 +44,12 @@
 		<ul>
 			<li>
 				<img src="images/logo.jpg" alt="">
-				<span>wangxu</span>
-				<span>man</span>
-				<span>$20</span>
-				<p>从事该行业两年，经验丰富，态度热情</p>
+				<div class="wrap-span">
+				<span>姓名：wangxu</span>
+				<span>性别：man</span>
+				<span>$99</span>
+				</div>
+				<p></p>
 				<button>预定</button>
 			</li>
 			<li>
@@ -62,8 +64,8 @@
 		<ul>
 			<li>
 				<img src="images/logo.jpg" alt="">
-				<span>wangxu</span>
-				<span>man</span>
+				<span>姓名：wangxu</span>
+				<span>性别：man</span>
 				<span>$20</span>
 				<p>从事该行业两年，经验丰富，态度热情</p>
 				<button>预定</button>
@@ -128,19 +130,35 @@
 
 	   $(function(){
 
-	 //   	// 瀑布流开始
-	 //   	$.get('hair/get_hair', function(res){
-		// 	for(var i=0; i<res.length; i++){
-		// 		var hair = res[i];
-		// 		var html = '<li>'+ 
-		// 					   '<img src="" alt="">'+
-		// 					   '<span>'+ hair.hair_name +'</span>'+
-		// 					   '<p></p>'+
-		// 					   '<button></button>'+
-		// 				   '</li>';
-		// 		$('#indent').append(html);
-		// 	}
-		// }, 'json');
+	   	// 瀑布流开始
+	   	var kind = "";//标志位   加载的服务种类
+	   	var oHair = $('#hair');
+	   	function selected(k){
+	   		k.addClass('active').siblings().removeClass('active');
+	   	}
+	   	oHair.on('click', function(){
+	   		selected(oHair);
+	   		kind="hair";
+	   		get(kind);
+	   	})
+	   	function get(x){
+		   	$.get("hair/get_"+kind, function(res){
+				for(var i=0; i<res.length; i++){
+					var hair = res[i];
+					var html = '<li>'+
+									'<img src="'+'images/logo.jpg'+'" alt="">'+
+									'<div class="wrap-span">'+
+										'<span>姓名：'+hair.hair_name+'</span>'+
+										'<span>性别：'+hair.hair_sex+'</span>'+
+										'<span>$'+hair.hair_price+'</span>'+
+									'</div>'+
+									'<p>'+hair.hair_introduction+'</p>'+
+									'<button>预定</button>'+
+								'</li>'
+					$('#indent ul').eq(0).append(html);
+				}
+			}, 'json');
+	   	}
 		//瀑布流结束
 
 
