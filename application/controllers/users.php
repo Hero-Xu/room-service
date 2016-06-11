@@ -7,7 +7,6 @@
 
 		public function regist(){
 			$this->load->view('regist');
-
 		}
 		public function do_regist(){
 			$name = $this->input->post('username');
@@ -29,16 +28,14 @@
 			$this->load->model('users_model');
 			$row = $this->users_model->login($name, $pwd);
 			if($row){
-				echo "success";
-				
+				echo "success";				
 				$newdata = array(
-                   "username"  => "欢迎您：".$row -> user_name,
+                   "username"  => $row -> user_name,
                    "change-ID" => '<a href="users/login" style="color:blue">切换账号</a>',
                    "indent" => "我的订单",
 				   "display"=>'style="display:none"'
 
                	);
-
 				$this->session->set_userdata($newdata);
 			}else{
 				echo "fail";

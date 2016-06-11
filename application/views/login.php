@@ -26,6 +26,6 @@
 		</form>
 	</div>
 <script src="js/jquery-1.11.3.js"></script>
-<script src="js/index.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>
