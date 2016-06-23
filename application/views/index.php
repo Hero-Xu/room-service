@@ -32,9 +32,9 @@
 			    <li id="teacher"><a>家教</a></li>
 			    <li id="clean"><a>清洁</a></li>
 			    <li id="hand"><a>美甲</a></li>
-			    <li><a>关于我们</a></li>
+			    <!-- <li><a>关于我们</a></li> -->
 			    <!-- <li><a>联系我们</a></li> -->
-				<li><a onsubmit="return false"><?php echo $indent?></a></li>
+				<li id="myIndent"><a><?php echo $indent?></a></li>
 			</ul>
 		</div>
     </div>
@@ -52,8 +52,8 @@
 				</ul>
 				<div id="imgs">
 					<img class="img-selected" src="images/擦窗.jpg">
-					<img src="images/家电修理.jpg">
-					<img src="images/logo.jpg">
+					<img src="images/teacher-1.jpg">
+					<img src="images/hair-4.jpg">
 					<img src="images/logo2.jpg">
 					<img src="images/家电修理.jpg">
 					

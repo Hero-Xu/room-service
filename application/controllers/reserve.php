@@ -17,6 +17,13 @@
 			echo "success";
 
 		}
+
+		public function get_indent(){
+			$this->load->model('indent_model');
+			$result = $this->indent_model->get_indent();			
+			echo json_encode($result);
+
+		}
 	}
 
 

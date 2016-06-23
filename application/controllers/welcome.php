@@ -27,7 +27,7 @@ class Welcome extends CI_Controller {
 		$this->session->unset_userdata('change-ID');//删session
 		$this->session->unset_userdata('indent');//删session
 		$this->session->unset_userdata('display');//删session
-		// $data['username'] = $username;
+		$data['username'] = $username;
 		$data = array(
 			'username'=>$username,
 			'change'=>$change,

@@ -112,20 +112,42 @@ $(function(){
 		}
 		
 	});
-	
-
-	
-
-
-
-
-
-
-
-
-
 	// 订单预订结束
-	function getMinUl(){
+	//我的订单开始
+	var $myIndent = $('#myIndent');
+	$myIndent.on('click', function(){
+		selected($myIndent);
+		var html = '<div id="inner">'+
+						'<div id="indent">'+
+								'<div class="container">'+
+								'</div>'+
+							'</div>'+
+						'</div>'
+		$(html).replaceAll('#inner');
+		$.get('reserve/get_indent', function(req){
+			for(var i = 0; i<req.length; i++){
+				var row = req[i];
+				var html = '<div id="myIndentRow">'+
+								'<span>订单种类：'+row.kind+'</span>'+
+								'<span><img src="images/'+row.img+'"/></span>'+
+								'<span>服务者：'+row.name+'</span>'+
+								'<span>'+row.sex+'</span>'+
+								'<span>'+row.price+'</span>'+
+						   '</div>';
+				$('#inner .container').append(html);
+			}
+		},'json');
+	})
+
+
+
+
+
+
+
+	//我的订单结束
+
+	function getMinUl(){//获得最短ul
 		var $uls = $('#indent ul');
 		var $minUl = $uls.eq(0);
 		for(i=1; i<$uls.length; i++){

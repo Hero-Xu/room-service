@@ -11,6 +11,9 @@
 
 			$this->db->insert('t_indent', $data);
 		}
+		public function get_indent(){
+			return $this->db->get('t_indent')->result();
+		}
 
 	}
 ?>
